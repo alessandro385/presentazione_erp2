@@ -239,7 +239,7 @@
                     <p>E-commerce provvederà ad esportare Ad Hoc per gli ordini clienti in tempo reale.</p>
                     <p>Gli ordini entreranno nel ciclo attivo per la fatturazione.</p>
                     <p>Esempio del sito:</p>
-                    <img src="../assets-gap analysis/Immagine WhatsApp 2025-05-19 ore 14.31.19_1428b531.jpg" alt="Screenshot esempio sito e-commerce" class="img-fluid rounded shadow mb-3" style="max-width:400px;">
+                    <img id="zoomableImage" src="../assets-gap analysis/Immagine WhatsApp 2025-05-19 ore 14.31.19_1428b531.jpg" alt="Screenshot esempio sito e-commerce" class="img-fluid rounded shadow mb-3" style="max-width:400px; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#imageModal">
                  </div>
              </div>
 
@@ -301,6 +301,21 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Immagine Ingrandita</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="" id="modalImage" class="img-fluid" alt="Immagine Ingrandita">
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- AOS JS -->
@@ -310,6 +325,17 @@
             duration: 800,
             once: true,
         });
+
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const zoomableImage = document.getElementById('zoomableImage');
+
+        if (imageModal && modalImage && zoomableImage) {
+            imageModal.addEventListener('show.bs.modal', function (event) {
+                const imageSrc = zoomableImage.src;
+                modalImage.src = imageSrc;
+            });
+        }
     </script>
 </body>
 </html> 
