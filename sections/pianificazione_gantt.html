@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pianificazione Progetto (Gantt) - Dreamwear</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">Progetto Dreamwear</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Presentazione</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assessment_as_is.html">Assessment</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="pianificazione_gantt.html">Pianificazione</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="gap_analysis_solution.html">Gap Analysis</a></li>
+                                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5 pt-5">
+        <div class="text-center mb-5" data-aos="fade-down">
+            <h1 class="display-5">Pianificazione del Progetto (Diagramma di Gantt)</h1>
+                 </div>
+
+        <section id="gantt-chart-section" data-aos="fade-up">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Dettaglio Pianificazione (Gantt)</h3>
+                </div>
+                <div class="card-body">
+                    <p>La seguente immagine mostra il dettaglio delle attività pianificate per l'implementazione del progetto ERP Dreamwear.</p>
+                    <!-- Rimuovo la tabella Gantt -->
+                    <!-- <div id="gantt-table-container" class="table-responsive mt-3"> ... tabella rimossa ... </div> -->
+                    
+                    <!-- Inserisco l'immagine del Gantt -->
+                    <div class="text-center mt-3" data-aos="zoom-in">
+                       <img src="../images/diagramma_gantt_completo.png" alt="Diagramma di Gantt del Progetto Dreamwear" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gantt-details" class="mt-5" data-aos="fade-up">
+            <div class="card shadow-sm">
+                 <div class="card-header">
+                    <h3 class="mb-0">Dettaglio Fasi del Gantt</h3>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="ganttAccordion">
+                        <!-- Fase 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Fase 1: Analisi e Pianificazione (Settimane 1-4)
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#ganttAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Kick-off Meeting e Definizione Team:</strong> Presentazione ufficiale, allineamento obiettivi, definizione ruoli e responsabilità. (S1)</li>
+                                        <li><strong>Raccolta Requisiti Dettagliata (Assessment AS-IS):</strong> Interviste, workshop con i key user per mappare i processi attuali e identificare le esigenze specifiche. (S1-S2)</li>
+                                        <li><strong>Analisi Funzionalità Ad Hoc Revolution:</strong> Studio approfondito delle capacità standard del gestionale in relazione ai requisiti. (S2-S3)</li>
+                                        <li><strong>Redazione Documento di Assessment:</strong> Formalizzazione dell'analisi AS-IS e dei requisiti. (S3)</li>
+                                        <li><strong>Gap Analysis:</strong> Identificazione degli scostamenti tra AS-IS e funzionalità standard, definizione dei gap da colmare. (S3-S4)</li>
+                                        <li><strong>Definizione Soluzioni TO-BE:</strong> Progettazione delle configurazioni, personalizzazioni e procedure per raggiungere gli obiettivi. (S4)</li>
+                                        <li><strong>Redazione Documento di Gap Analysis e Soluzioni:</strong> Formalizzazione delle soluzioni TO-BE. (S4)</li>
+                                        <li><strong>Approvazione e Pianificazione Implementazione:</strong> Revisione e approvazione dei documenti, finalizzazione del piano di progetto. (S4)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fase 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Fase 2: Configurazione e Sviluppo (Settimane 5-12)
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#ganttAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Setup Ambiente di Test Ad Hoc:</strong> Installazione e configurazione iniziale del sistema in ambiente di test. (S5)</li>
+                                        <li><strong>Configurazione Moduli Standard:</strong> Parametrizzazione anagrafiche, ciclo attivo/passivo base, contabilità base. (S5-S7)</li>
+                                        <li><strong>Sviluppo Personalizzazioni (se necessarie):</strong> Realizzazione di eventuali script, report custom, integrazioni specifiche identificate nella Gap Analysis. (S7-S10)</li>
+                                        <li><strong>Migrazione Dati Iniziale (Anagrafiche Principali):</strong> Estrazione, trasformazione e caricamento (ETL) delle anagrafiche clienti, fornitori, articoli. (S8-S9)</li>
+                                        <li><strong>Test Interni Tecnici:</strong> Verifiche funzionali delle configurazioni e personalizzazioni da parte del team di progetto. (S10-S11)</li>
+                                        <li><strong>Formazione Utenti Chiave (Key Users):</strong> Training approfondito ai responsabili di processo sull'utilizzo del nuovo sistema. (S11-S12)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fase 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Fase 3: Test, Formazione e Go-Live (Settimane 13-16)
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#ganttAccordion">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>User Acceptance Test (UAT):</strong> Test condotti dagli utenti chiave per validare la rispondenza del sistema ai requisiti. (S13-S14)</li>
+                                        <li><strong>Correzione Bug e Rifiniture:</strong> Risoluzione delle problematiche emerse durante gli UAT. (S14)</li>
+                                        <li><strong>Formazione Utenti Finali:</strong> Training a tutti gli utenti che utilizzeranno il sistema. (S14-S15)</li>
+                                        <li><strong>Migrazione Dati Finale:</strong> Caricamento dei saldi contabili, ordini aperti, etc. (S15)</li>
+                                        <li><strong>Preparazione al Go-Live:</strong> Checklist finale, backup sistema attuale, definizione piano di cut-over. (S15)</li>
+                                        <li><strong>Go-Live:</strong> Avvio del nuovo sistema in produzione. (Inizio S16)</li>
+                                        <li><strong>Supporto Post Go-Live Iniziale:</strong> Assistenza intensiva agli utenti nelle prime settimane di utilizzo. (S16 e successive)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Gruppo Progetto Sistemi Informativi - Implementazione ERP Dreamwear</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Rimuovo script JS obsoleti -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Script specifici per la tabella o Gantt JS rimossi
+    </script>
+</body>
+</html> 
